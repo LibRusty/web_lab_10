@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+
+.stage {
+    background-image: url('1.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.not-interacted {
+    transition: transform 0.2s;
+}
+
+.not-interacted:hover {
+    transform: translateY(-5%);
+}
+
+.shifted {
+    transition: transform 1s;
+    transform: translateY(-100%);
+}
+
+.inactive {
+    display: none;
+}
+
+.illumination {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+}
+
+.beam {
+    position: fixed;
+    width: 84px;
+    border: 300px solid transparent;
+    border-bottom: 700px solid yellow;
+    transition: opacity 2s;
+    left: calc(50% - 340px);
+    top: -215px;
+    pointer-events: none;
+}
+
+.visible-beam {
+    opacity: 0.5;
+    display: block;
+}
+
+.hidden {
+    opacity: 0;
+    display: none;
+}
+
+.center-frame {
+    display: none;
+    grid-auto-rows: 200px;
+    height: 200px;
+    width: 400px;
+    grid-template-columns: 200px 200px;
+    flex: 0;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hat-area {
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    grid-column: 2/3;
+}
+
+.magician {
+    grid-column: 1/2;
+}
+
+.hat {
+    max-width: 80px;
+    max-height: 80px;
+    height: auto;
+    width: auto;
+    flex: 0 0 auto;
+}
+
+.moving-image {
+    transform: translateY(250%);
+}
+
+.primary-animal {
+    max-width: 40px;
+    max-height: 40px;
+    height: auto;
+    width: auto;
+    flex: 0 0 auto;
+    transition: transform 1s;
+}
+
+.rotating {
+    transform: rotate(180deg);
+}
+
+img {
+    height: 100%;
+    width: auto;
+}
